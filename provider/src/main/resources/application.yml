@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: app-provider
+  profiles:
+    active: provider1
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://app-eureka:app-eureka@127.0.0.1:5000/eureka
+    register-with-eureka: true #是否将自己当做服务注册
+    fetch-registry: true #是否注册信息
+  instance:
+    prefer-ip-address: true
+---
+spring:
+  profiles: provider1
+server:
+  port: 5010
+
+s-spring-cloud:
+  dynamic-call:
+    msg: provider_1
+---
+spring:
+  profiles: provider2
+server:
+  port: 5011
+
+s-spring-cloud:
+  dynamic-call:
+    msg: provider_2
+---
+spring:
+  profiles: provider3
+server:
+  port: 5012
+
+s-spring-cloud:
+  dynamic-call:
+    msg: provider_3
