@@ -2,7 +2,6 @@ package priv.mrledger.provider.feigncall.controller;
 
 import com.google.common.collect.Maps;
 import com.google.gson.Gson;
-import jdk.nashorn.internal.runtime.logging.Logger;
 import org.springframework.web.bind.annotation.*;
 import priv.mrledger.starter.common.dto.Person;
 
@@ -11,7 +10,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.HashMap;
 
-@Logger
 @RequestMapping("/feignCall")
 @RestController
 public class ProviderFeignCallController {
