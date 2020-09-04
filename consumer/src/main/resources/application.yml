@@ -18,4 +18,4 @@ ribbon:
   ReadTimeout: 50000
 s-spring-cloud:
   dynamic-call:
-    enabled: false
+    enabled: true
